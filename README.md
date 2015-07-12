@@ -3,7 +3,8 @@
 version 0.2
 
 ngComplexify is a module/directive (485 bytes minified) that determines the complexity of a
-given password, it emits an event on the scope with the persentance of the password complexity
+given password, it emits an event on the scope with the persentance of the password complexity.
+Also it has the ability to check agains 10.000 common passwords.
 
 ### Installation
 Download and place the script before your angular application script and after the core angular module.
@@ -40,6 +41,6 @@ You can listen to the `$scope.$emit('passwordComplexity', complexity)` event.
 | Options       | Type          | Explanation  |
 | ------------- |:-------------:| -----:|
 | `ng-model` | string | required |
-| `complexify-common-passwords` | boolean | Check again common passwords (default: true) |
+| `complexify-common-passwords` | boolean | Check again 10.000 common passwords (default: true) |
 | `complexify-min-length`| number | Minumum password length (optional) |
 | `complexify-css-attribute`| string | The css attribute of which the color will change (optional) |
