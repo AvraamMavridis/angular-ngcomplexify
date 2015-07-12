@@ -48,11 +48,14 @@ angular.module('ngComplexify', [])
           var color = perc < 30 ? '#D50000' : (perc > 60 ? '#7CB342' : '#FFB300');
           var color = Boolean(val) == 0 ? 'white' : color;
 
-          var cssProperty = attrs['complexifyCssAttribute'] || 'background-color';
-          var css = Object.create(null);
-          css[cssProperty] = color;
+          var cssProperty = attrs['complexifyCssAttribute'];
+          if(!!cssProperty){
+            var css = Object.create(null);
+            css[cssProperty] = color;
+            element.css(css)
+          }
 
-          element.css(css)
+          $scope.$emit('passwordComplexity', complexity)
 
         });
       }
