@@ -2,7 +2,7 @@
 
 version 0.2
 
-ngComplexify is a module/directive (485 bytes minified) that determines the complexity of a
+ngComplexify is a module/directive (94.077 kB minified) that determines the complexity of a
 given password, it emits an event on the scope with the persentance of the password complexity.
 Also it has the ability to check agains 10.000 common passwords.
 
